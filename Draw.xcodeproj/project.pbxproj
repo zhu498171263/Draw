@@ -8,24 +8,71 @@
 
 /* Begin PBXBuildFile section */
 		A9323444221A96E200ABAC20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323443221A96E200ABAC20 /* AppDelegate.m */; };
-		A9323447221A96E200ABAC20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323446221A96E200ABAC20 /* ViewController.m */; };
+		A9323447221A96E200ABAC20 /* LXPaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323446221A96E200ABAC20 /* LXPaintViewController.m */; };
 		A932344A221A96E200ABAC20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9323448221A96E200ABAC20 /* Main.storyboard */; };
 		A932344C221A96E500ABAC20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A932344B221A96E500ABAC20 /* Assets.xcassets */; };
 		A932344F221A96E500ABAC20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932344D221A96E500ABAC20 /* LaunchScreen.storyboard */; };
 		A9323452221A96E500ABAC20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323451221A96E500ABAC20 /* main.m */; };
+		A9323462221A997F00ABAC20 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A932345F221A997E00ABAC20 /* MBProgressHUD.bundle */; };
+		A9323463221A997F00ABAC20 /* MBProgressHUD+LX.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323460221A997E00ABAC20 /* MBProgressHUD+LX.m */; };
+		A9323464221A997F00ABAC20 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323461221A997E00ABAC20 /* MBProgressHUD.m */; };
+		A9323467221A99B500ABAC20 /* LXPaintBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323466221A99B500ABAC20 /* LXPaintBGView.m */; };
+		A932346A221AA0A900ABAC20 /* LXPaintingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323469221AA0A900ABAC20 /* LXPaintingView.m */; };
+		A932346F221B8DDC00ABAC20 /* LXBaseBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A932346E221B8DDC00ABAC20 /* LXBaseBrush.m */; };
+		A9323474221B8FAE00ABAC20 /* LXPencilBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323473221B8FAE00ABAC20 /* LXPencilBrush.m */; };
+		A9323478221B901F00ABAC20 /* LXRectangleBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323477221B901F00ABAC20 /* LXRectangleBrush.m */; };
+		A932347B221B908E00ABAC20 /* LXEllipseBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A932347A221B908E00ABAC20 /* LXEllipseBrush.m */; };
+		A932347E221B90B700ABAC20 /* LXCircleBrush.m in Sources */ = {isa = PBXBuildFile; fileRef = A932347D221B90B700ABAC20 /* LXCircleBrush.m */; };
+		A9323481221B970000ABAC20 /* LXPaintingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323480221B970000ABAC20 /* LXPaintingLayer.m */; };
+		A9323484221B97F000ABAC20 /* LXImageManger.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323483221B97F000ABAC20 /* LXImageManger.m */; };
+		A9323488221BA6DD00ABAC20 /* LXUnlockingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323487221BA6DD00ABAC20 /* LXUnlockingViewController.m */; };
+		A932348B221BA73900ABAC20 /* LXUnlockingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A932348A221BA73900ABAC20 /* LXUnlockingView.m */; };
+		A932348F221BC90F00ABAC20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A932348E221BC90F00ABAC20 /* QuartzCore.framework */; };
+		A9323492221BCC3100ABAC20 /* LXImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = A9323491221BCC3100ABAC20 /* LXImagePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A932343F221A96E200ABAC20 /* Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9323442221A96E200ABAC20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9323443221A96E200ABAC20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A9323445221A96E200ABAC20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A9323446221A96E200ABAC20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A9323445221A96E200ABAC20 /* LXPaintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPaintViewController.h; sourceTree = "<group>"; };
+		A9323446221A96E200ABAC20 /* LXPaintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPaintViewController.m; sourceTree = "<group>"; };
 		A9323449221A96E200ABAC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A932344B221A96E500ABAC20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A932344E221A96E500ABAC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9323450221A96E500ABAC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9323451221A96E500ABAC20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A932345D221A997E00ABAC20 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A932345E221A997E00ABAC20 /* MBProgressHUD+LX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+LX.h"; sourceTree = "<group>"; };
+		A932345F221A997E00ABAC20 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		A9323460221A997E00ABAC20 /* MBProgressHUD+LX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+LX.m"; sourceTree = "<group>"; };
+		A9323461221A997E00ABAC20 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A9323465221A99B500ABAC20 /* LXPaintBGView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPaintBGView.h; sourceTree = "<group>"; };
+		A9323466221A99B500ABAC20 /* LXPaintBGView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPaintBGView.m; sourceTree = "<group>"; };
+		A9323468221AA0A900ABAC20 /* LXPaintingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPaintingView.h; sourceTree = "<group>"; };
+		A9323469221AA0A900ABAC20 /* LXPaintingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPaintingView.m; sourceTree = "<group>"; };
+		A932346D221B8DDC00ABAC20 /* LXBaseBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXBaseBrush.h; sourceTree = "<group>"; };
+		A932346E221B8DDC00ABAC20 /* LXBaseBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXBaseBrush.m; sourceTree = "<group>"; };
+		A9323470221B8E3E00ABAC20 /* LXPaintBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPaintBrush.h; sourceTree = "<group>"; };
+		A9323472221B8FAE00ABAC20 /* LXPencilBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPencilBrush.h; sourceTree = "<group>"; };
+		A9323473221B8FAE00ABAC20 /* LXPencilBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPencilBrush.m; sourceTree = "<group>"; };
+		A9323476221B901F00ABAC20 /* LXRectangleBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXRectangleBrush.h; sourceTree = "<group>"; };
+		A9323477221B901F00ABAC20 /* LXRectangleBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXRectangleBrush.m; sourceTree = "<group>"; };
+		A9323479221B908E00ABAC20 /* LXEllipseBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXEllipseBrush.h; sourceTree = "<group>"; };
+		A932347A221B908E00ABAC20 /* LXEllipseBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXEllipseBrush.m; sourceTree = "<group>"; };
+		A932347C221B90B700ABAC20 /* LXCircleBrush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXCircleBrush.h; sourceTree = "<group>"; };
+		A932347D221B90B700ABAC20 /* LXCircleBrush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXCircleBrush.m; sourceTree = "<group>"; };
+		A932347F221B970000ABAC20 /* LXPaintingLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPaintingLayer.h; sourceTree = "<group>"; };
+		A9323480221B970000ABAC20 /* LXPaintingLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPaintingLayer.m; sourceTree = "<group>"; };
+		A9323482221B97F000ABAC20 /* LXImageManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXImageManger.h; sourceTree = "<group>"; };
+		A9323483221B97F000ABAC20 /* LXImageManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXImageManger.m; sourceTree = "<group>"; };
+		A9323486221BA6DD00ABAC20 /* LXUnlockingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXUnlockingViewController.h; sourceTree = "<group>"; };
+		A9323487221BA6DD00ABAC20 /* LXUnlockingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXUnlockingViewController.m; sourceTree = "<group>"; };
+		A9323489221BA73900ABAC20 /* LXUnlockingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXUnlockingView.h; sourceTree = "<group>"; };
+		A932348A221BA73900ABAC20 /* LXUnlockingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXUnlockingView.m; sourceTree = "<group>"; };
+		A932348E221BC90F00ABAC20 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A9323490221BCC3100ABAC20 /* LXImagePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXImagePicker.h; sourceTree = "<group>"; };
+		A9323491221BCC3100ABAC20 /* LXImagePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXImagePicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A932348F221BC90F00ABAC20 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +92,7 @@
 			children = (
 				A9323441221A96E200ABAC20 /* Draw */,
 				A9323440221A96E200ABAC20 /* Products */,
+				A932348D221BC90E00ABAC20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +107,14 @@
 		A9323441221A96E200ABAC20 /* Draw */ = {
 			isa = PBXGroup;
 			children = (
+				A932346C221B8DBD00ABAC20 /* Brush */,
+				A932345C221A996C00ABAC20 /* MBProgressHUD */,
+				A932345B221A995000ABAC20 /* RSColorPicker */,
+				A932345A221A993900ABAC20 /* Behavior */,
+				A9323459221A992600ABAC20 /* Controller */,
+				A9323458221A991D00ABAC20 /* View */,
 				A9323442221A96E200ABAC20 /* AppDelegate.h */,
 				A9323443221A96E200ABAC20 /* AppDelegate.m */,
-				A9323445221A96E200ABAC20 /* ViewController.h */,
-				A9323446221A96E200ABAC20 /* ViewController.m */,
 				A9323448221A96E200ABAC20 /* Main.storyboard */,
 				A932344B221A96E500ABAC20 /* Assets.xcassets */,
 				A932344D221A96E500ABAC20 /* LaunchScreen.storyboard */,
@@ -69,6 +122,104 @@
 				A9323451221A96E500ABAC20 /* main.m */,
 			);
 			path = Draw;
+			sourceTree = "<group>";
+		};
+		A9323458221A991D00ABAC20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9323465221A99B500ABAC20 /* LXPaintBGView.h */,
+				A9323466221A99B500ABAC20 /* LXPaintBGView.m */,
+				A9323468221AA0A900ABAC20 /* LXPaintingView.h */,
+				A9323469221AA0A900ABAC20 /* LXPaintingView.m */,
+				A932347F221B970000ABAC20 /* LXPaintingLayer.h */,
+				A9323480221B970000ABAC20 /* LXPaintingLayer.m */,
+				A9323489221BA73900ABAC20 /* LXUnlockingView.h */,
+				A932348A221BA73900ABAC20 /* LXUnlockingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9323459221A992600ABAC20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9323445221A96E200ABAC20 /* LXPaintViewController.h */,
+				A9323446221A96E200ABAC20 /* LXPaintViewController.m */,
+				A9323486221BA6DD00ABAC20 /* LXUnlockingViewController.h */,
+				A9323487221BA6DD00ABAC20 /* LXUnlockingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A932345A221A993900ABAC20 /* Behavior */ = {
+			isa = PBXGroup;
+			children = (
+				A9323482221B97F000ABAC20 /* LXImageManger.h */,
+				A9323483221B97F000ABAC20 /* LXImageManger.m */,
+				A9323490221BCC3100ABAC20 /* LXImagePicker.h */,
+				A9323491221BCC3100ABAC20 /* LXImagePicker.m */,
+			);
+			path = Behavior;
+			sourceTree = "<group>";
+		};
+		A932345B221A995000ABAC20 /* RSColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RSColorPicker;
+			sourceTree = "<group>";
+		};
+		A932345C221A996C00ABAC20 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A932345F221A997E00ABAC20 /* MBProgressHUD.bundle */,
+				A932345D221A997E00ABAC20 /* MBProgressHUD.h */,
+				A9323461221A997E00ABAC20 /* MBProgressHUD.m */,
+				A932345E221A997E00ABAC20 /* MBProgressHUD+LX.h */,
+				A9323460221A997E00ABAC20 /* MBProgressHUD+LX.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		A932346C221B8DBD00ABAC20 /* Brush */ = {
+			isa = PBXGroup;
+			children = (
+				A9323475221B900D00ABAC20 /* RectBrush */,
+				A9323471221B8F9000ABAC20 /* curve */,
+				A932346D221B8DDC00ABAC20 /* LXBaseBrush.h */,
+				A932346E221B8DDC00ABAC20 /* LXBaseBrush.m */,
+				A9323470221B8E3E00ABAC20 /* LXPaintBrush.h */,
+			);
+			path = Brush;
+			sourceTree = "<group>";
+		};
+		A9323471221B8F9000ABAC20 /* curve */ = {
+			isa = PBXGroup;
+			children = (
+				A9323472221B8FAE00ABAC20 /* LXPencilBrush.h */,
+				A9323473221B8FAE00ABAC20 /* LXPencilBrush.m */,
+			);
+			path = curve;
+			sourceTree = "<group>";
+		};
+		A9323475221B900D00ABAC20 /* RectBrush */ = {
+			isa = PBXGroup;
+			children = (
+				A9323476221B901F00ABAC20 /* LXRectangleBrush.h */,
+				A9323477221B901F00ABAC20 /* LXRectangleBrush.m */,
+				A9323479221B908E00ABAC20 /* LXEllipseBrush.h */,
+				A932347A221B908E00ABAC20 /* LXEllipseBrush.m */,
+				A932347C221B90B700ABAC20 /* LXCircleBrush.h */,
+				A932347D221B90B700ABAC20 /* LXCircleBrush.m */,
+			);
+			path = RectBrush;
+			sourceTree = "<group>";
+		};
+		A932348D221BC90E00ABAC20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A932348E221BC90F00ABAC20 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A932344F221A96E500ABAC20 /* LaunchScreen.storyboard in Resources */,
+				A9323462221A997F00ABAC20 /* MBProgressHUD.bundle in Resources */,
 				A932344C221A96E500ABAC20 /* Assets.xcassets in Resources */,
 				A932344A221A96E200ABAC20 /* Main.storyboard in Resources */,
 			);
@@ -141,9 +293,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9323447221A96E200ABAC20 /* ViewController.m in Sources */,
+				A932347E221B90B700ABAC20 /* LXCircleBrush.m in Sources */,
+				A9323481221B970000ABAC20 /* LXPaintingLayer.m in Sources */,
+				A9323447221A96E200ABAC20 /* LXPaintViewController.m in Sources */,
+				A9323492221BCC3100ABAC20 /* LXImagePicker.m in Sources */,
+				A9323484221B97F000ABAC20 /* LXImageManger.m in Sources */,
+				A932346A221AA0A900ABAC20 /* LXPaintingView.m in Sources */,
+				A932348B221BA73900ABAC20 /* LXUnlockingView.m in Sources */,
+				A9323474221B8FAE00ABAC20 /* LXPencilBrush.m in Sources */,
+				A932347B221B908E00ABAC20 /* LXEllipseBrush.m in Sources */,
+				A9323463221A997F00ABAC20 /* MBProgressHUD+LX.m in Sources */,
+				A932346F221B8DDC00ABAC20 /* LXBaseBrush.m in Sources */,
+				A9323464221A997F00ABAC20 /* MBProgressHUD.m in Sources */,
+				A9323488221BA6DD00ABAC20 /* LXUnlockingViewController.m in Sources */,
+				A9323478221B901F00ABAC20 /* LXRectangleBrush.m in Sources */,
 				A9323452221A96E500ABAC20 /* main.m in Sources */,
 				A9323444221A96E200ABAC20 /* AppDelegate.m in Sources */,
+				A9323467221A99B500ABAC20 /* LXPaintBGView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

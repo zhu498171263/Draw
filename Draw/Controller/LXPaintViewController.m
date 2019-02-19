@@ -6,13 +6,16 @@
 //  Copyright © 2019 zhu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LXPaintViewController.h"
+#import "LXPaintBGView.h"
 
-@interface ViewController ()
+@interface LXPaintViewController ()
+
+@property (strong, nonatomic) IBOutlet LXPaintBGView *controlView;
 
 @end
 
-@implementation ViewController
+@implementation LXPaintViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

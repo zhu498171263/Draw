@@ -1,24 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Paint View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LXPaintViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nf5-BK-Bj4" userLabel="Graffiti View" customClass="LXPaintBGView">
+                                <rect key="frame" x="-9" y="0.0" width="676" height="375"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McI-GW-pov">
+                                        <rect key="frame" x="0.0" y="20" width="676" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="XcF-5s-1EY"/>
+                                        </constraints>
+                                        <items>
+                                            <navigationItem title="🌀涂鸦🌀" id="sij-t9-NLi">
+                                                <barButtonItem key="leftBarButtonItem" title="📒选择照片" id="80r-Vs-g8a">
+                                                    <connections>
+                                                        <action selector="pickImage:" destination="nf5-BK-Bj4" id="YCo-iV-BrI"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" title="🎨调色盘" id="rPi-sj-3gd"/>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvA-OY-xVB" userLabel="Painting View" customClass="LXPaintingView">
+                                        <rect key="frame" x="20" y="132" width="636" height="223"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ioW-Bb-jY4" userLabel="Brush Type Control">
+                                        <rect key="frame" x="268" y="84" width="140" height="29"/>
+                                        <segments>
+                                            <segment title="画笔"/>
+                                            <segment title="矩形"/>
+                                            <segment title="正圆"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="selectBrushAction:" destination="nf5-BK-Bj4" eventType="valueChanged" id="GkR-y5-Mse"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="49" translatesAutoresizingMaskIntoConstraints="NO" id="Eld-F3-meH" userLabel="Line Width Slider">
+                                        <rect key="frame" x="78" y="83" width="118" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="Ac0-99-aON"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="selectLineWidthAction:" destination="nf5-BK-Bj4" eventType="valueChanged" id="cuU-38-HRn"/>
+                                        </connections>
+                                    </slider>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxC-Qw-Cb6" userLabel="PreviewView">
+                                        <rect key="frame" x="20" y="72" width="52" height="52"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="y47-c4-r0P"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bat-Cv-M0P" userLabel="UndoButton">
+                                        <rect key="frame" x="202" y="83" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="Fso-dZ-VLl"/>
+                                            <constraint firstAttribute="height" constant="30" id="JHs-78-rEn"/>
+                                        </constraints>
+                                        <state key="normal" image="UndoButton"/>
+                                        <connections>
+                                            <action selector="undoAction:" destination="nf5-BK-Bj4" eventType="touchUpInside" id="qtX-nQ-XVT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U15-Ct-bqA" userLabel="RedoButton">
+                                        <rect key="frame" x="230" y="83" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="60J-AK-Y3b"/>
+                                            <constraint firstAttribute="width" constant="30" id="WVe-bC-h60"/>
+                                        </constraints>
+                                        <state key="normal" image="RedoButton"/>
+                                        <connections>
+                                            <action selector="redoAction:" destination="nf5-BK-Bj4" eventType="touchUpInside" id="fPj-lb-oIs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25061720609664917" green="0.25528377294540405" blue="0.25510314106941223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="McI-GW-pov" secondAttribute="trailing" id="2DI-eo-76D"/>
+                                    <constraint firstItem="gxC-Qw-Cb6" firstAttribute="top" secondItem="McI-GW-pov" secondAttribute="bottom" constant="8" id="4KN-Mm-b69"/>
+                                    <constraint firstItem="gxC-Qw-Cb6" firstAttribute="leading" secondItem="nf5-BK-Bj4" secondAttribute="leading" constant="20" id="78a-xN-yZl"/>
+                                    <constraint firstItem="PvA-OY-xVB" firstAttribute="leading" secondItem="nf5-BK-Bj4" secondAttribute="leading" constant="20" id="CLd-Av-SyE"/>
+                                    <constraint firstItem="PvA-OY-xVB" firstAttribute="top" secondItem="nf5-BK-Bj4" secondAttribute="top" constant="132" id="IqA-4Y-HYD"/>
+                                    <constraint firstItem="ioW-Bb-jY4" firstAttribute="leading" secondItem="U15-Ct-bqA" secondAttribute="trailing" constant="8" id="Lbc-Qf-kjW"/>
+                                    <constraint firstItem="ioW-Bb-jY4" firstAttribute="top" secondItem="McI-GW-pov" secondAttribute="bottom" constant="20" id="RUJ-ou-OSp"/>
+                                    <constraint firstItem="PvA-OY-xVB" firstAttribute="top" secondItem="gxC-Qw-Cb6" secondAttribute="bottom" constant="8" id="V9q-Dq-eya"/>
+                                    <constraint firstItem="bat-Cv-M0P" firstAttribute="centerY" secondItem="ioW-Bb-jY4" secondAttribute="centerY" id="Vcl-3r-jeL"/>
+                                    <constraint firstItem="McI-GW-pov" firstAttribute="leading" secondItem="nf5-BK-Bj4" secondAttribute="leading" id="ZMd-f4-jzA"/>
+                                    <constraint firstItem="Eld-F3-meH" firstAttribute="leading" secondItem="gxC-Qw-Cb6" secondAttribute="trailing" constant="8" id="bH2-Bk-zRg"/>
+                                    <constraint firstItem="bat-Cv-M0P" firstAttribute="leading" secondItem="Eld-F3-meH" secondAttribute="trailing" constant="8" id="g2W-KQ-pbM"/>
+                                    <constraint firstItem="ioW-Bb-jY4" firstAttribute="centerX" secondItem="nf5-BK-Bj4" secondAttribute="centerX" id="iAl-c6-rOr"/>
+                                    <constraint firstAttribute="trailing" secondItem="PvA-OY-xVB" secondAttribute="trailing" constant="20" id="juP-hS-FfB"/>
+                                    <constraint firstItem="McI-GW-pov" firstAttribute="top" secondItem="nf5-BK-Bj4" secondAttribute="top" constant="20" id="kOE-q8-eQ5"/>
+                                    <constraint firstItem="ioW-Bb-jY4" firstAttribute="leading" secondItem="bat-Cv-M0P" secondAttribute="trailing" constant="36" id="kqg-tR-e4T"/>
+                                    <constraint firstItem="Eld-F3-meH" firstAttribute="centerY" secondItem="ioW-Bb-jY4" secondAttribute="centerY" id="ty5-pr-9Vm"/>
+                                    <constraint firstItem="U15-Ct-bqA" firstAttribute="centerY" secondItem="ioW-Bb-jY4" secondAttribute="centerY" id="ujj-gd-r1d"/>
+                                    <constraint firstAttribute="bottom" secondItem="PvA-OY-xVB" secondAttribute="bottom" constant="20" id="wJd-EV-FqA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="brushTypeControl" destination="ioW-Bb-jY4" id="tn3-uy-WtH"/>
+                                    <outlet property="lineWidthSlider" destination="Eld-F3-meH" id="ZmM-sm-Zw1"/>
+                                    <outlet property="navItem" destination="sij-t9-NLi" id="rZI-FJ-FTW"/>
+                                    <outlet property="paintingView" destination="PvA-OY-xVB" id="Yfx-qF-C4O"/>
+                                    <outlet property="previewView" destination="gxC-Qw-Cb6" id="kK2-aM-ZJr"/>
+                                    <outlet property="redoButton" destination="U15-Ct-bqA" id="1a3-lw-luM"/>
+                                    <outlet property="undoButton" destination="bat-Cv-M0P" id="fhH-Ow-nwc"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nf5-BK-Bj4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JZb-u1-nMN"/>
+                            <constraint firstItem="nf5-BK-Bj4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fR8-cb-Dwh"/>
+                            <constraint firstItem="nf5-BK-Bj4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v3d-QV-KaF"/>
+                            <constraint firstItem="nf5-BK-Bj4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-9" id="zU4-yl-ueh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="controlView" destination="nf5-BK-Bj4" id="Bir-tw-uAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30.134932533733135" y="48.799999999999997"/>
+        </scene>
+        <!--Unlocking View Controller-->
+        <scene sceneID="Mdk-GP-syP">
+            <objects>
+                <viewController id="5YB-Bj-Vjg" customClass="LXUnlockingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tDt-9P-K9z">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_refresh_bg" translatesAutoresizingMaskIntoConstraints="NO" id="lhm-GS-KaL">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-mb-qEW" customClass="LXUnlockingView">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KhV-mb-qEW" firstAttribute="leading" secondItem="BdH-ix-A0W" secondAttribute="leading" id="BMp-c4-tLg"/>
+                            <constraint firstItem="KhV-mb-qEW" firstAttribute="bottom" secondItem="BdH-ix-A0W" secondAttribute="bottom" id="Eaq-lg-WRj"/>
+                            <constraint firstItem="lhm-GS-KaL" firstAttribute="leading" secondItem="BdH-ix-A0W" secondAttribute="leading" id="MRa-VW-h8r"/>
+                            <constraint firstItem="lhm-GS-KaL" firstAttribute="trailing" secondItem="BdH-ix-A0W" secondAttribute="trailing" id="N09-3j-tTT"/>
+                            <constraint firstItem="lhm-GS-KaL" firstAttribute="top" secondItem="BdH-ix-A0W" secondAttribute="top" id="SkO-17-pCI"/>
+                            <constraint firstItem="KhV-mb-qEW" firstAttribute="top" secondItem="BdH-ix-A0W" secondAttribute="top" id="X5i-nQ-P9Z"/>
+                            <constraint firstItem="lhm-GS-KaL" firstAttribute="bottom" secondItem="BdH-ix-A0W" secondAttribute="bottom" id="v3C-cP-8XZ"/>
+                            <constraint firstItem="KhV-mb-qEW" firstAttribute="trailing" secondItem="BdH-ix-A0W" secondAttribute="trailing" id="wBT-H4-84S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BdH-ix-A0W"/>
+                    </view>
+                    <connections>
+                        <outlet property="unlockingView" destination="KhV-mb-qEW" id="tTs-ci-rpB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sij-R2-fxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-249.62518740629687" y="794.39999999999998"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Home_refresh_bg" width="640" height="1008"/>
+        <image name="RedoButton" width="30" height="30"/>
+        <image name="UndoButton" width="30" height="30"/>
+    </resources>
 </document>

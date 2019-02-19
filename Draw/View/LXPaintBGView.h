@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LXPaintView.h
 //  Draw
 //
 //  Created by zhu on 2019/2/18.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LXPaintBGView : UIView
 
+/** 选中的颜色. */
+@property (nonatomic, strong) UIColor *selectedColor;
 
 @end
-
